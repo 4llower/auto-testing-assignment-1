@@ -16,16 +16,15 @@ if (!stagedFiles) {
 try {
   console.log(`Linting and fixing staged files: ${stagedFiles}`);
 
-  execSync(
-    `npx eslint --config=eslint.config.js --fix --no-cache ${stagedFiles}`,
-    { stdio: "inherit" }
-  );
+  execSync(`npx eslint --config=eslint.config.js --no-cache ${stagedFiles}`, {
+    stdio: "inherit",
+  });
 
   execSync(`npx prettier --write ${stagedFiles}`, { stdio: "inherit" });
 
   execSync(`git add ${stagedFiles}`, { stdio: "inherit" });
 
-  console.log("✅ Lint and format succeeded. Files re-added to staging.");
+  console.log("✅ Lint succeeded. Files re-added to staging.");
 } catch (error) {
   console.error("❌ Linting failed.");
   process.exit(1);

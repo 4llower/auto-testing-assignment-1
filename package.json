@@ -5,7 +5,7 @@
   "scripts": {
     "test": "mocha --config=.mocharc.json",
     "coverage": "c8 --check-coverage --lines 100 npm test",
-    "lint": " eslint --config=eslint.config.js --fix --no-cache"
+    "lint-fix": " eslint --config=eslint.config.js --fix --no-cache"
   },
   "repository": {
     "type": "git",
