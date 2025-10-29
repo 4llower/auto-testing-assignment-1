@@ -20,8 +20,6 @@ try {
     stdio: "inherit",
   });
 
-  execSync(`npx prettier --write ${stagedFiles}`, { stdio: "inherit" });
-
   execSync(`git add ${stagedFiles}`, { stdio: "inherit" });
 
   console.log("✅ Lint succeeded. Files re-added to staging.");

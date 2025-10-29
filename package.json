@@ -30,7 +30,6 @@
     "util.promisify": "^1.1.3"
   },
   "devDependencies": {
-    "husky": "^9.1.7",
-    "prettier": "3.6.2"
+    "husky": "^9.1.7"
   }
 }
