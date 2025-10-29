@@ -6,7 +6,7 @@ describe('checkStudentKnowledge', () => {
     const studentAnswers = {};
     const correctAnswers = { correctAnwser1: 'correctAnswer' };
 
-    expect(checkStudentKnowledge(studentAnswers, correctAnswers)).equals(false);
+    expect(checkStudentKnowledge(studentAnswers, correctAnswers)).to.be.false;
   });
   it('should return false if the answer keys are not the same', () => {
     const studentAnswers = { helloBrother: '228', correctAnwser2: 335 };
@@ -15,7 +15,7 @@ describe('checkStudentKnowledge', () => {
       correctAnwser2: 32312,
     };
 
-    expect(checkStudentKnowledge(studentAnswers, correctAnswers)).equals(false);
+    expect(checkStudentKnowledge(studentAnswers, correctAnswers)).to.be.false;
   });
   it('should return false if the answer value are not exactly the same', () => {
     const studentAnswers = { correctAnwser1: '228', correctAnwser2: 'hello' };
@@ -24,7 +24,7 @@ describe('checkStudentKnowledge', () => {
       correctAnwser2: 'hello',
     };
 
-    expect(checkStudentKnowledge(studentAnswers, correctAnswers)).equals(false);
+    expect(checkStudentKnowledge(studentAnswers, correctAnswers)).to.be.false;
   });
   it('should return true if the answers keys and answers values are the same', () => {
     const studentAnswers = {
@@ -36,6 +36,6 @@ describe('checkStudentKnowledge', () => {
       currectQuestion2: 'correctAnswer2',
     };
 
-    expect(checkStudentKnowledge(studentAnswers, correctAnswers)).equals(true);
+    expect(checkStudentKnowledge(studentAnswers, correctAnswers)).to.be.true;
   });
 });

@@ -41,10 +41,10 @@ describe('stringUtils', () => {
       }).to.throw('Input must be a string');
     });
     it('should return true if string can be read the same in both directions', () => {
-      expect(isPalindrome('abccba')).equals(true);
+      expect(isPalindrome('abccba')).to.be.true;
     });
     it('should return false if string CANNOT be read the same in both directions', () => {
-      expect(isPalindrome('abcdefg')).equals(false);
+      expect(isPalindrome('abcdefg')).to.be.false;
     });
   });
 });
