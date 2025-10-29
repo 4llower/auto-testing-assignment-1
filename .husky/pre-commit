@@ -1,1 +1,1 @@
-npx lint-staged
+node pre-commit.js

@@ -4,11 +4,8 @@
   "description": "first assignment in collection",
   "scripts": {
     "test": "mocha --config=.mocharc.json",
-    "prepare": "husky",
-    "coverage": "c8 --check-coverage --lines 100 npm test"
-  },
-  "lint-staged": {
-    "**/*": "eslint && prettier --write --ignore-unknown"
+    "coverage": "c8 --check-coverage --lines 100 npm test",
+    "lint": " eslint --config=eslint.config.js --fix --no-cache"
   },
   "repository": {
     "type": "git",
@@ -33,7 +30,6 @@
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.6",
     "prettier": "3.6.2"
   }
 }
