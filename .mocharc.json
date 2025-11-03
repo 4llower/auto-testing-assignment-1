@@ -1,0 +1,7 @@
+{
+    "spec": ["utils/*.test.js"],
+    "require": [
+        "@babel/register",
+        "regenerator-runtime"
+    ]
+}
